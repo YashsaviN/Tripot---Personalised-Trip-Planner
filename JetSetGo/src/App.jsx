@@ -1,17 +1,15 @@
 import './App.css'
 import Home from './components/Home/Home'
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/navbar/nav'
 
 function App() {
 
+
   return (
-    <>
-      <Home />
-      <Navbar /> 
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </>
+    <div className = 'text-sm md:text-lg'>
+      <Home/>
+      <Navbar/>
+    </div>
   )
 }
 
