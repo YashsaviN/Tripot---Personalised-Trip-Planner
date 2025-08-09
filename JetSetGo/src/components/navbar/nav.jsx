@@ -13,6 +13,7 @@ const Navbar = () => {
                 </div>
                 <ul className="space-x-8 text-gray-700">
                     <li><a href="#home" className="hover:text-blue-600">Home</a></li>
+                    <li><a href="#trip" className="hover:text-blue-600">Dashboard</a></li>
                 </ul>
             </div>
         </nav>
