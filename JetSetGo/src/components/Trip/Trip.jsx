@@ -98,7 +98,7 @@ const Dashboard = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-400 via-purple-400 to-orange-300 py-10 px-5">
+        <div className="min-h-screen bg-gradient-to-br from-blue-400 via-orange-200 to-orange-300 py-10 px-5">
             <div className="max-w-6xl mx-auto">
                 {/* Trip Title */}
                 <h1 className="text-4xl font-bold mb-8 text-center font-serif text-white drop-shadow-lg">
