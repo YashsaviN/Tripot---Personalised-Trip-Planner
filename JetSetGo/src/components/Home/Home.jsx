@@ -16,7 +16,6 @@ const Home = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
 
-  // Cycle background
   React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
@@ -29,10 +28,8 @@ const Home = () => {
 
   const tripData = { destination, budget, startDate, endDate, createdAt: new Date(), budgetItems: [], itinerary: [], tasks: [] };
 
-  // Save to localStorage
   localStorage.setItem("activeTrip", JSON.stringify(tripData));
 
-  // Navigate to dashboard
   navigate("/dashboard");
 };
 

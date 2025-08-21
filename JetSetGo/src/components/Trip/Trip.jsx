@@ -23,7 +23,6 @@ const Dashboard = () => {
         if (savedTrip) setActiveTrip(JSON.parse(savedTrip));
     }, []);
 
-    // Budget handlers
     const addBudgetItem = () => {
         if (expense && amount) {
             const updatedBudget = [...budgetItems, { expense, amount }];
@@ -48,7 +47,6 @@ const Dashboard = () => {
     };
 
 
-    // Itinerary handlers
     const addItineraryItem = () => {
         if (activity && dateTime) {
             const updatedItinerary = [...itinerary, { activity, dateTime }];
@@ -73,10 +71,9 @@ const Dashboard = () => {
     };
 
 
-    // To-Do handlers
     const addTask = () => {
         if (task) {
-            const updatedTasks = [...tasks, task]; // <-- store string, not object
+            const updatedTasks = [...tasks, task]; 
             setTasks(updatedTasks);
 
             const updatedTrip = { ...activeTrip, tasks: updatedTasks };
@@ -100,12 +97,9 @@ const Dashboard = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-400 via-orange-200 to-orange-300 py-10 px-5">
             <div className="max-w-6xl mx-auto">
-                {/* Trip Title */}
                 <h1 className="text-4xl font-bold mb-8 text-center font-serif text-white drop-shadow-lg">
                 </h1>
 
-
-                {/* Tabs */}
                 <div className="flex justify-center space-x-8 border-b-2 border-white/50 mb-8">
                     {[
                         { id: "budget", label: "Budget", icon: <Wallet size={18} /> },
@@ -125,7 +119,6 @@ const Dashboard = () => {
                     ))}
                 </div>
 
-                {/* Tab Content */}
                 <div className="mt-6">
                     <AnimatePresence mode="wait">
                         {activeTab === "budget" && (
